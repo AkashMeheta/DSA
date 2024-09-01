@@ -46,10 +46,9 @@ void reverse_words(string str)
     }
 
     cout << res << " " << res.length();
-    
-    
-    
+
 }
+
 
 
 int main()
@@ -59,6 +58,7 @@ int main()
     getline(cin, str);
 
     reverse_words(str);
+    
 
     return 0;
 }

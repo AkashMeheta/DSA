@@ -57,13 +57,47 @@ void BFS(Tree* root){
 }
 
 
-int main(){
-    Tree* root = CreateNode(2);
-    
-    root->left = CreateNode(3);
-    root->right = CreateNode(4);
+Tree* insertion(Tree* root, int data){
+    if(root == nullptr){
+        root = CreateNode(data);
+        return root;
+    }
 
-    root->left->left = CreateNode(5);
+    queue<Tree*> q;
+    q.push(root);
+
+    while(!q.empty()){
+        Tree* node = q.front();
+        q.pop();
+
+        if(node->left != nullptr){
+            q.push(node->left);
+        }else{
+            node->left = CreateNode(data);
+            return root;
+        }
+
+        if(node->right != nullptr){
+            q.push(node->right);
+        }else{
+            node->right = CreateNode(data);
+            return root;
+        }
+    }
+}
+
+int main(){
+    Tree* root = CreateNode(1);
+    
+    root->left = CreateNode(2);
+    root->right = CreateNode(3);
+
+    root->right->right = CreateNode(4);
+    root->right->right->right = CreateNode(5);
+    // cout << "In-order DFS before insertion: ";
+    // inorder_traversal(root);
+    // int data = 10;
+    // root = insertion(root, data);
 
     cout << "In-order DFS: ";
     inorder_traversal(root);

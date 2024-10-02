@@ -39,14 +39,32 @@ int dec_to_bin(int dec){
     return bin;
 }
 
+void new_dec_to_bin(int dec){
+    string res = "";
+    while(dec){
+        if(dec%2 == 1){
+            res+="1";
+        }else{
+            res+='0';
+        }
+        dec = dec/2;
+    }
+    string str = reverse(res);
+    cout<<str;
+}
+
+
 int main(){ 
 
     int dec;
     cout<<"Decimal Number: ";
     cin>>dec;
 
-    int bin = dec_to_bin(dec);
-    bin_to_dec(bin);
+    new_dec_to_bin(dec);
+    //bin_to_dec(bin);
 
+    int bin = dec_to_bin(dec);
+
+    cout<<(13 | 7);
     return 0;
 }

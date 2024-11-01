@@ -37,7 +37,6 @@ void spiral_Matrix(vector<vector<int>> arr){
             }
             left++;
         }
-
         direction = (direction%4) + 1;
     }
 

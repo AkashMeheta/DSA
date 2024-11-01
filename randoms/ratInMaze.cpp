@@ -23,8 +23,7 @@ bool ratInMaze(vector<vector<int>>& arr, int x, int y, int n, vector<vector<int>
         }
         sol[x][y] = 0;
         return false;
-    }
-    
+    } 
 }
 
 int main(){

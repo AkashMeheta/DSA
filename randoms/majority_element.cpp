@@ -44,6 +44,7 @@ void majority(vector<int> arr){
 }
 
 
+
 int main(){
     vector<int> arr;
 

@@ -3,7 +3,7 @@ using namespace std;
 
 void rotate(vector<vector<int>>& arr, int row){
     for(int i =0; i<row; i++){
-        for(int j = 0; j<i; j++){
+        for(int j =0; j<i; j++){
             swap(arr[i][j], arr[j][i]);
         }
     }
@@ -64,13 +64,15 @@ int main(){
         for(int j=0; j<col; j++){
             ss >> arr[i][j];
         }
+        
     }
-    // rotate(arr, row);
-    // cout<<endl;
+    
+    rotate(arr, row);
+    cout<<endl;
 
-    spiral(arr);
-    // Displaying the 2D array
-    cout << "The 2D array is:\n";
+    // spiral(arr);
+    // // Displaying the 2D array
+    // cout << "The 2D array is:\n";
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
             cout << arr[i][j] << " ";

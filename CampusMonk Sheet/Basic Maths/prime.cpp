@@ -3,12 +3,16 @@
 using namespace std;
 
 bool prime(int num){
-    for(int i = 2; i<num; i++){
+    int c1=0;
+    for(int i = 1; i*i<=num; i++){
         if(num%i == 0){
-            return false;
+            c1++;
+            if(num/i != i) c1++;
         }
     }
-    return true;
+    if(c1 == 2) return true;
+    
+    return false;
     
 }
 

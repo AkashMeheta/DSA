@@ -1,4 +1,8 @@
-for(int i = 0; i<size; i++){
-            cout<<stones[i]<<" ";
-        }
-        cout<<endl;
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+
+    return 0;
+}
